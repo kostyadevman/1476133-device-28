@@ -15,8 +15,9 @@
       </a>
       <form action="https://echo.htmlacademy.ru"
             method="post" aria-label="Поиск по сайту">
-        <label class="visually-hidden" for="search">Ваш запрос:</label>
-        <input type="search" id="search" placeholder="Поиск по сайту">
+        <input type="search" name="query"
+               id="search" placeholder="Поиск по сайту">
+        <button type="submit">Найти</button>
       </form>
       <a href="blank.html">Валентин Петухов</a>
       <a href="blank.html">Выйти</a>
@@ -27,12 +28,12 @@
           <li>
             <a href="#">Каталог товаров</a>
             <ul>
-              <li><a href="blank.html">Виртуальная реальность</a></li>
-              <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="blank.html">Экшн-камеры</a></li>
-              <li><a href="blank.html">Фитнес-браслеты</a></li>
-              <li><a href="blank.html">Умные часы</a></li>
-              <li><a href="blank.html">Квадрокоптеры</a></li>
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
           <li><a href="blank.html">Доставка</a></li>
@@ -48,8 +49,8 @@
         </h1>
         <ul>
           <li><a href="index.html">Главная</a><div> > </div></li>
-          <li><a href="catalog.html">Каталог товаров</a><div> > </div></li>
-          <li><a href="catalog.html">Моноподы для селфи</a></li>
+          <li><a href="#">Каталог товаров</a><div> > </div></li>
+          <li><a href="#">Моноподы для селфи</a></li>
         </ul>
         <aside>
           <h2>Фильтр:</h2>
@@ -63,27 +64,27 @@
               <legend>Цвет</legend>
               <ul>
                 <li>
-                  <input type="checkbox" name="black" id="color-black"
-                       value="black" checked>
+                  <input type="checkbox" name="color[]"
+                         id="color-black" value="black" checked>
                   <label for="color-black">Черный</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="white"
+                  <input type="checkbox" name="color[]"
                          id="color-white"  value="white">
                   <label for="color-white">Белый</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="navy"
+                  <input type="checkbox" name="color[]"
                          id="color-navy" checked value="navy">
                   <label for="color-navy">Синий</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="red"
+                  <input type="checkbox" name="color[]"
                          id="color-red" value="red" checked>
                   <label for="color-red">Красный</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="pink"
+                  <input type="checkbox" name="color[]"
                        id="color-pink" value="pink">
                   <label for="color-pink">Розовый</label>
                 </li>
