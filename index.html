@@ -46,10 +46,10 @@
         Главная страница интернет-магазина техники Device
       </h1>
       <section>
-        <h2>Промо-товары</h2>
+        <h2 class="visually-hidden">Промо-товары</h2>
         <ul>
           <li>
-            <h3>Селфи палка</h3>
+            <h3 class="visually-hidden">Селфи палка</h3>
             <img src="img/slider-1.png"
                        width="384"
                        height="486"
@@ -80,7 +80,7 @@
             </ul>
           </li>
           <li>
-            <h3>Фитнес-браслет</h3>
+            <h3 class="visually-hidden">Фитнес-браслет</h3>
             <img src="img/slider-2.png"
                        width="345"
                        height="485"
@@ -104,7 +104,7 @@
             </ul>
           </li>
           <li>
-            <h3>Квадрокоптер</h3>
+            <h3 class="visually-hidden">Квадрокоптер</h3>
             <img src="img/slider-3.png"
                        width="526"
                        height="334"
@@ -118,7 +118,6 @@
             <p>
               Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
               мощным лазером, замаскированным под стандартную камеру.
-
             </p>
             <a href="blank.html">Подробнее</a>
             <ul>
@@ -135,64 +134,42 @@
         </ul>
       </section>
       <section>
-        <h2>Популярные-категории</h2>
+        <h2 class="visually-hidden">Популярные-категории</h2>
         <ul>
           <li>
-            <a href="blank.html">
-              <img src="https://via.placeholder.com/160x160"
-                   width="160"
-                   height="160"
-                   alt="">
+            <a href="catalog.html">
               <h3>Виртуальная реальность</h3>
             </a>
           </li>
           <li>
             <a href="catalog.html">
-              <img src="https://via.placeholder.com/160x160"
-                   width="160"
-                   height="160"
-                   alt="">
               <h3>Моноподы для селфи</h3>
             </a>
           </li>
           <li>
-            <a href="blank.html">
-              <img src="https://via.placeholder.com/160x160"
-                   width="160"
-                   height="160"
-                   alt="">
+            <a href="catalog.html">
               <h3>Экшн-камеры</h3>
             </a>
           </li>
           <li>
-            <a href="blank.html">
-              <img src="https://via.placeholder.com/160x160"
-                   width="160"
-                   height="160"
-                   alt="">
+            <a href="catalog.html">
               <h3>Фитнес-браслеты</h3>
             </a>
           </li>
           <li>
-            <a href="blank.html">
-              <img src="https://via.placeholder.com/160x160"
-                   width="160"
-                   height="160"
-                   alt="">
+            <a href="catalog.html">
               <h3>Умные часы</h3>
             </a>
           </li>
-          <li><a href="blank.html">
-            <img src="https://via.placeholder.com/160x160"
-                   width="160"
-                   height="160"
-                   alt="">
-            <h3>Квадрокоптеры</h3>
-          </a></li>
+          <li>
+            <a href="catalog.html">
+              <h3>Квадрокоптеры</h3>
+            </a>
+          </li>
         </ul>
       </section>
       <section>
-        <h2>Сервисы</h2>
+        <h2 class="visually-hidden">Сервисы</h2>
         <ul>
           <li><a href="#delivery">Доставка</a></li>
           <li><a href="#warranty">Гарантия</a></li>
@@ -224,7 +201,7 @@
         </section>
       </section>
       <section>
-        <h2>Бренды</h2>
+        <h2 class="visually-hidden">Бренды</h2>
         <ul>
           <li>
             <img src="img/dji.jpg"
@@ -293,7 +270,7 @@
         <img src="img/logo-device.svg"
              width="163"
              height="35"
-             alt="Логотип">
+             alt="Логотип Девайс">
       </a>
       <address>
         г. Москва, ул. Строителей, 15
@@ -330,20 +307,20 @@
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label for="contact_name">Ваше имя:</label>
+          <label for="contact-name">Ваше имя:</label>
           <input type="text" name="name"
-                 id="contact_name"placeholder="Имя Фамилия">
+                 id="contact-name"placeholder="Имя Фамилия">
         </p>
         <p>
-          <label for="contact_email">Ваш e-mail:</label>
+          <label for="contact-email">Ваш e-mail:</label>
           <input type="email" name="email"
-                 id="contact_email"
+                 id="contact-email"
                  placeholder="email@example.com">
         </p>
         <p>
-          <label>Текст письма:</label>
+          <label for="contact-message">Текст письма:</label>
           <textarea name="message"
-                    id="contact_message" placeholder="В свободной форме">
+                    id="contact-message" placeholder="В свободной форме">
           </textarea>
         </p>
         <button type="submit">Отправить</button>
