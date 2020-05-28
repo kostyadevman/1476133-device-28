@@ -3,30 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
-    <header>
-      <a href="#">
+  <body class="page-body">
+    <header class="main-header">
+      <a class="main-header-logo">
         <img src="img/logo-device.svg"
              width="163"
              height="35"
              alt="Логотип Девайс">
       </a>
       <form action="https://echo.htmlacademy.ru"
-            method="post" aria-label="Поиск по сайту">
+            method="post" aria-label="Поиск по сайту" autocomplete="off">
         <input type="search" name="query"
                id="search" placeholder="Поиск по сайту">
-        <button type="submit">Найти</button>
+        <button class="button-search" type="submit"><span>Найти</span></button>
       </form>
-      <a href="blank.html">Войти</a>
-      <a href="blank.html">Сравнить</a>
-      <a href="blank.html">Корзина</a>
-      <nav>
-        <ul>
+      <div class="header-user-links">
+        <a class="link-login" href="blank.html">Войти</a>
+        <a class="link-compare" href="blank.html">Cравнить</a>
+        <a class="link-cart" href="blank.html">Корзина</a>
+      </div>
+      <nav class="nav main-navigation">
+        <ul class="site-navigation">
           <li>
             <a href="catalog.html">Каталог товаров</a>
-            <ul>
+            <ul class="catalog-navigation">
               <li><a href="catalog.html">Виртуальная реальность</a></li>
               <li><a href="catalog.html">Моноподы для селфи</a></li>
               <li><a href="catalog.html">Экшн-камеры</a></li>
@@ -229,24 +232,30 @@
           </li>
         </ul>
       </section>
-      <section>
+      <section class="about-us">
         <h2>О нас</h2>
-        <p>
-          Огромный выбор гаджетов не оставит равнодушным гика,<br>
-          который есть в каждом из нас.
-        </p>
-        <p>
-          Мы можем доставить ваш товар в самые отдаленные точки<br>
-          России! DEVICE работает со многими транспортными компаниями:
-        </p>
-        <ul>
-          <li><b>Деловые линии</b></li>
-          <li><b>Авторейдинг</b></li>
-          <li><b>ЖелДорЭкспедиция</b></li>
+        <ul class="advantages">
+          <li>
+            <p>
+              Огромный выбор гаджетов не оставит равнодушным гика,<br>
+              который есть в каждом из нас.
+            </p>
+          </li>
+          <li>
+            <p>
+              Мы можем доставить ваш товар в самые отдаленные точки<br>
+              России! DEVICE работает со многими транспортными компаниями:
+            </p>
+            <ul class="company-list">
+              <li><b>Деловые линии</b></li>
+              <li><b>Авторейдинг</b></li>
+              <li><b>ЖелДорЭкспедиция</b></li>
+            </ul>
+          </li>
         </ul>
-        <button type="button">подробнее о нас</button>
+        <button class="btn" type="button"><span>подробнее о нас</span></button>
       </section>
-      <section>
+      <section class="contacts">
         <h2>Контакты</h2>
         <p>
           Вы можете забрать товар сами, заехав в наш офис.
@@ -259,24 +268,26 @@
                height="222"
                alt="Карта с маркером Москва улица Строителй 15">
         </a>
-        <button type="button">напишите нам</button>
+        <button class="btn" type="button"><span>напишите нам</span></button>
       </section>
     </main>
-    <footer>
-      <a href="blank.html">Войти</a>
-      <a href="blank.html">Cравнить</a>
-      <a href="blank.html">Корзина</a>
-      <a href="#">
-        <img src="img/logo-device.svg"
-             width="163"
-             height="35"
-             alt="Логотип Девайс">
+    <footer class="main-footer">
+      <div class="footer-user-links">
+        <a class="link-login" href="blank.html">Войти</a>
+        <a class="link-compare" href="blank.html">Cравнить</a>
+        <a class="link-cart" href="blank.html">Корзина</a>
+      </div>
+      <a class="main-footer-logo">
+        <span class="visually-hidden">Логотип Девайс</span>
+        <svg  width="163" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 35">
+          <path d="m0.35 0.7v33.6h13.532a15.723 15.723 0 0 0 11.72-4.824 16.464 16.464 0 0 0 4.712-11.976 16.465 16.465 0 0 0-4.712-11.976 15.723 15.723 0 0 0-11.72-4.824zm7.733 26.208v-18.819h5.8a8.648 8.648 0 0 1 6.5 2.568 9.412 9.412 0 0 1 2.489 6.84 9.41 9.41 0 0 1-2.489 6.84 8.646 8.646 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3h-12.086v-5.567h13.291v-7.389h-21.024v33.6h21.265v-7.392h-13.532v-5.952zm36.343 13.344 11.019-33.6h-8.458l-7.491 24.72-7.491-24.72h-8.457l11.019 33.6zm14.4 0h7.733v-33.6h-7.733zm38.615-1.416a15.514 15.514 0 0 0 6.041-5.688l-6.67-3.84a7.488 7.488 0 0 1-3.165 3.024 9.874 9.874 0 0 1-4.664 1.1 9.594 9.594 0 0 1-7.177-2.736 9.907 9.907 0 0 1-2.682-7.248 9.908 9.908 0 0 1 2.682-7.248 9.594 9.594 0 0 1 7.177-2.736 9.914 9.914 0 0 1 4.64 1.08 7.6 7.6 0 0 1 3.189 3.048l6.67-3.84a15.881 15.881 0 0 0-6.09-5.688 17.419 17.419 0 0 0-8.409-2.088 17.12 17.12 0 0 0-17.592 17.472 17.12 17.12 0 0 0 17.589 17.476 17.519 17.519 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085v-5.567h13.29v-7.389h-21.022v33.6h21.264v-7.392h-13.532v-5.952z" fill="#F0C52E"/>
+        </svg>
       </a>
       <address>
         г. Москва, ул. Строителей, 15
       </address>
-      <nav>
-        <ul>
+      <nav class="nav main-footer-nav">
+        <ul class="site-navigation">
           <li><a href="blank.html">Доставка</a></li>
           <li><a href="blank.html">Гарантия</a></li>
           <li><a href="blank.html">Контакты</a></li>
@@ -285,17 +296,35 @@
       <p>
         Тел.: +7 (495) 495-95-95
       </p>
-      <ul>
-        <li>
-          <a href="#">Фейсбук</a>
-        </li>
-        <li>
-          <a href="#">Инстаграм</a>
-        </li>
-        <li>
-          <a href="#">Твиттер</a>
-        </li>
+      <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul>
+          <li>
+            <a class="social-item" href="#">
+              <img src="img/fb.svg"
+                   width="32"
+                   height="32"
+                   alt="Фейсбук">
+            </a>
+          </li>
+          <li>
+            <a class="social-item" href="#">
+              <img src="img/instagram.svg"
+                   width="32"
+                   height="32"
+                   alt="Инстаграм">
+            </a>
+          </li>
+          <li>
+            <a class="social-item" href="#">
+              <img src="img/twitter.svg"
+                   width="32"
+                   height="32"
+                   alt="Твиттер">
+            </a>
+          </li>
       </ul>
+      </section>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-html.svg"
            width="24"
@@ -303,7 +332,7 @@
            alt="HTML Academy">
       </a>
     </footer>
-    <section>
+    <section class="modal">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
@@ -327,7 +356,7 @@
       </form>
       <button type="button">Закрыть</button>
     </section>
-    <section>
+    <section class="modal">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <figure>
         <img src="img/map-big.png"

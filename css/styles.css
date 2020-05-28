@@ -1,1 +1,371 @@
-.visually-hidden {}
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-white: #ffffff;
+  --basic-grey: #464646;
+  --basic-half-grey: #7E7E7E;
+  --basic-grey-light: #E5E5E5;
+
+  --special-yellow: #F7E296;
+  --special-green: #91C92F;
+  --special-yello-dark: #F0C52E;
+  --spacial-grey: #A6A6A6;
+}
+/* --- Fonts --- */
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/opensanslight.woff2") format("woff2"),
+  url("fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("fonts/opensans.woff2") format("woff2"),
+  url("fonts/opensans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/gilroylight.woff2") format("woff2"),
+  url("fonts/gilroylight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/gilroyextrabold.woff2") format("woff2"),
+  url("fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* --- Common --- */
+
+body {
+  min-width: 1180px;
+  margin: 0;
+  padding: 0;
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.nav {
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.btn {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background-color: var(--special-yello-dark);
+  border: none;
+}
+
+.btn:active > span {
+  opacity: 0.3;
+}
+/* --- Header --- */
+
+.main-header {
+  background-color: var(--special-yellow)
+}
+
+/* Search*/
+input[type="search"] {
+  background-color: var(--special-yellow);
+  border: none;
+  opacity: 0.3;
+}
+input[type="search"]:hover {
+  opacity: 0.6;
+}
+
+input[type="search"]:focus {
+  opacity: 1;
+}
+
+.button-search {
+  font-family: inherit;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: var(--special-yellow);
+}
+
+.button-search:hover {
+  background-color: var(--basic-black);
+  color: var(--basic-white);
+}
+
+.button-search:active > span {
+  background-color: var(--basic-black);
+  color: var(--basic-white);
+  opacity: 0.3;
+}
+
+/*Navigation */
+
+.catalog-navigation {
+  font-family:  "OpenSans";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: lowercase;
+  letter-spacing: 0px;
+}
+
+.catalog-navigation li::first-letter{
+  text-transform: capitalize;
+}
+
+.site-navigation,
+.catalog-navigation {
+  list-style: none;
+}
+
+.main-header a[href]:hover{
+  opacity: 0.6;
+}
+
+.main-header a[href]:active {
+  opacity: 0.3;
+}
+
+/* --- Main index--- */
+
+.about-us h2,
+.contacts h2 {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 4px;
+}
+
+.advantages {
+  list-style: none;
+}
+
+.advantages li {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: 28px;
+}
+
+.company-list {
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.contacts {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: 28px;
+}
+
+/* --- Main catalog --- */
+
+.page-title {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+/*Filter*/
+.filters {
+  background-color: var(--basic-grey-light);
+}
+
+.filter legend {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2px;
+}
+
+.filter ul {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  list-style: none;
+  line-height: 19px;
+}
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:active + label {
+  color: var(--spacial-grey);
+}
+
+.filter-input-radio:hover + label,
+.filter-input-radio:active + label {
+  color: var(--spacial-grey);
+}
+
+/*Catalog*/
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item h3 {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.catalog-item-price {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.btn-compare {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  border: none;
+  background-color: var(--basic-white);
+  opacity: 0.5;
+}
+
+.btn-compare:hover {
+  opacity: 1;
+}
+
+.btn-compare:active {
+  opacity: 0.2;
+}
+
+
+/* --- Footer --- */
+
+.main-footer {
+  background-color: var(--basic-dark);
+  color: var(--basic-white)
+}
+
+/*Navigation  */
+
+main-footer-nav {
+
+}
+
+.main-footer a {
+  color: inherit;
+}
+
+.main-footer a[href]:hover{
+  opacity: 0.6;
+}
+
+.main-footer a[href]:active {
+  opacity: 0.3;
+}
+
+/*Social*/
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-item {
+  opacity: 0.3;
+}
+
+.social-item:hover {
+  opacity: 0.6;
+}
+
+.social-item:active {
+  opacity: 0.1;
+}
+
+/*User links*/
+
+.footer-user-links a {
+  opacity: 0.7;
+}
+
+.footer-user-links a:hover {
+  opacity: 1;
+}
+
+.footer-user-links a:active {
+  opacity: 0.3;
+}
+
+.modal {
+  display: none;
+}
