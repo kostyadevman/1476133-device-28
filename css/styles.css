@@ -8,39 +8,44 @@
 
   --special-yellow: #F7E296;
   --special-green: #91C92F;
-  --special-yello-dark: #F0C52E;
+  --special-yellow-dark: #F0C52E;
   --spacial-grey: #A6A6A6;
+
+  --opensans-and-alt: "OpenSans", Arial, sans-serif;
+  --opensans-light-and-alt: "OpenSans Light", Arial, sans-serif;
+  --gilroy-light-and-alt: "Gilroy Light", Arial, sans-serif;
+  --gilroy-extra-bold-and-alt: "Gilroy Extra Bold", Arial, sans-serif;
 }
 /* --- Fonts --- */
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("fonts/opensanslight.woff2") format("woff2"),
-  url("fonts/opensanslight.woff") format("woff");
+  font-family: "OpenSans Light";
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/opensanslight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "OpenSans";
-  src: url("fonts/opensans.woff2") format("woff2"),
-  url("fonts/opensans.woff") format("woff");
+  src: url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("fonts/gilroylight.woff2") format("woff2"),
-  url("fonts/gilroylight.woff") format("woff");
+  font-family: "Gilroy Light";
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("fonts/gilroyextrabold.woff2") format("woff2"),
-  url("fonts/gilroyextrabold.woff") format("woff");
+  font-family: "Gilroy Extra Bold";
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
@@ -51,10 +56,9 @@ body {
   min-width: 1180px;
   margin: 0;
   padding: 0;
-  font-family: "OpenSans", Arial, sans-serif;
+  font-family: var(--opensans-light-and-alt);
   font-size: 15px;
   line-height: 20px;
-  font-weight: 300;
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
@@ -77,29 +81,19 @@ img {
   margin: -1px;
 }
 
-.nav {
-  font-family: "Gilroy";
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 22px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.btn {
-  font-family: "Gilroy";
-  font-weight: 800;
+.button-common {
+  font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  background-color: var(--special-yello-dark);
+  background-color: var(--special-yellow-dark);
   border: none;
 }
 
-.btn:active > span {
-  opacity: 0.3;
-}
+
+
+
 /* --- Header --- */
 
 .main-header {
@@ -107,17 +101,8 @@ img {
 }
 
 /* Search*/
-input[type="search"] {
+.input-search {
   background-color: var(--special-yellow);
-  border: none;
-  opacity: 0.3;
-}
-input[type="search"]:hover {
-  opacity: 0.6;
-}
-
-input[type="search"]:focus {
-  opacity: 1;
 }
 
 .button-search {
@@ -132,7 +117,9 @@ input[type="search"]:focus {
   color: var(--basic-white);
 }
 
-.button-search:active > span {
+ /* Изменение текста внутри кнопки при нажатии.
+ Можно сделать по-другому?*/
+.button-search:active > span{
   background-color: var(--basic-black);
   color: var(--basic-white);
   opacity: 0.3;
@@ -140,38 +127,45 @@ input[type="search"]:focus {
 
 /*Navigation */
 
-.catalog-navigation {
-  font-family:  "OpenSans";
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 20px;
-  text-transform: lowercase;
-  letter-spacing: 0px;
-}
-
-.catalog-navigation li::first-letter{
-  text-transform: capitalize;
-}
-
-.site-navigation,
-.catalog-navigation {
+.site-menu,
+.site-menu-inner {
   list-style: none;
 }
 
-.main-header a[href]:hover{
+.site-menu-item {
+  font-family: var(--gilroy-extra-bold-and-alt);
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.site-menu-inner-item {
+  font-family: var(--opensans-light-and-alt);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.main-header-logo:hover,
+.site-menu a:hover,
+.header-product-actions a:hover,
+.header-user-menu a:hover {
   opacity: 0.6;
 }
 
-.main-header a[href]:active {
+.main-header-logo:active,
+.site-menu a:active,
+.header-product-actions a:active,
+.header-user-menu a:active {
   opacity: 0.3;
 }
 
 /* --- Main index--- */
 
-.about-us h2,
-.contacts h2 {
-  font-family: "Gilroy";
-  font-weight: 800;
+.info-wrapper h2 {
+  font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 4px;
@@ -182,21 +176,17 @@ input[type="search"]:focus {
 }
 
 .advantages li {
-  font-family: inherit;
-  font-weight: inherit;
   font-size: inherit;
   line-height: 28px;
 }
 
 .company-list {
-  font-family: "Gilroy";
+  font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 16px;
   font-weight: 800;
 }
 
 .contacts {
-  font-family: inherit;
-  font-weight: inherit;
   font-size: inherit;
   line-height: 28px;
 }
@@ -204,9 +194,7 @@ input[type="search"]:focus {
 /* --- Main catalog --- */
 
 .page-title {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 800;
+  font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 47px;
   line-height: 58px;
 }
@@ -216,9 +204,6 @@ input[type="search"]:focus {
 }
 
 .breadcrumbs a {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
   font-size: 14px;
   line-height: 19px;
   opacity: 0.3;
@@ -236,34 +221,34 @@ input[type="search"]:focus {
 .filters {
   background-color: var(--basic-grey-light);
 }
-
+.sieve-header {
+  font-family: var(--gilroy-extra-bold-and-alt);
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 .filter legend {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 800;
+  font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 2px;
 }
 
 .filter ul {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 300;
   list-style: none;
   line-height: 19px;
 }
-
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:active + label {
-  color: var(--spacial-grey);
+.color-item,
+.choice-item {
+  font-size: 14px;
 }
 
-.filter-input-radio:hover + label,
-.filter-input-radio:active + label {
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+  cursor: default;
   color: var(--spacial-grey);
 }
-
 /*Catalog*/
 
 .catalog-list {
@@ -271,40 +256,35 @@ input[type="search"]:focus {
 }
 
 .catalog-item h3 {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 800;
+  font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 1px;
 }
 
 .catalog-item-price {
-  font-family: "Gilroy";
-  font-style: normal;
-  font-weight: 300;
+  font-family: var(--gilroy-light-and-alt);
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 1px;
 }
 
-.btn-compare {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
+.button-compare {
+  font-family: var(--opensans-light-and-alt);
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 1px;
   border: none;
   background-color: var(--basic-white);
   opacity: 0.5;
+  border: none;
 }
 
-.btn-compare:hover {
+.button-compare:hover {
   opacity: 1;
 }
 
-.btn-compare:active {
+.button-compare:active {
   opacity: 0.2;
 }
 
@@ -316,55 +296,69 @@ input[type="search"]:focus {
   color: var(--basic-white)
 }
 
-/*Navigation  */
-
-main-footer-nav {
-
-}
-
 .main-footer a {
   color: inherit;
 }
 
-.main-footer a[href]:hover{
+.main-footer-logo:hover,
+.html-academy-link:hover {
   opacity: 0.6;
 }
 
-.main-footer a[href]:active {
+.main-footer-logo:active,
+.html-academy-link:active {
   opacity: 0.3;
 }
 
-/*Social*/
+.stub-link,
+.stub-link:hover,
+.stub-link:active {
+  opacity: 1;
+}
+
+.footer-user-menu a {
+  opacity: 0.7;
+}
+
+.footer-user-menu a:hover {
+  opacity: 1;
+}
+
+.footer-user-menu a:active {
+  opacity: 0.3;
+}
+
+.footer-product-actions a {
+  opacity: 0.7;
+}
+
+.footer-product-actions a:hover {
+  opacity: 1;
+}
+
+.footer-product-actions a:active {
+  opacity: 0.3;
+}
 
 .footer-social ul {
   list-style: none;
 }
 
-.social-item {
+.social-item a {
   opacity: 0.3;
 }
 
-.social-item:hover {
+.social-item a:hover {
   opacity: 0.6;
 }
 
-.social-item:active {
+.social-item a:active {
   opacity: 0.1;
 }
 
-/*User links*/
 
-.footer-user-links a {
-  opacity: 0.7;
-}
 
-.footer-user-links a:hover {
-  opacity: 1;
-}
 
-.footer-user-links a:active {
-  opacity: 0.3;
-}
 
 .modal {
   display: none;
