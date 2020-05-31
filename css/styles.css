@@ -65,7 +65,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--basic-black);
+  color: inherit;
 }
 
 img {
@@ -91,9 +91,6 @@ img {
   border: none;
 }
 
-
-
-
 /* --- Header --- */
 
 .main-header {
@@ -117,9 +114,8 @@ img {
   color: var(--basic-white);
 }
 
- /* Изменение текста внутри кнопки при нажатии.
- Можно сделать по-другому?*/
-.button-search:active > span{
+
+.button-search:active  .button-search__text{
   background-color: var(--basic-black);
   color: var(--basic-white);
   opacity: 0.3;
@@ -128,11 +124,17 @@ img {
 /*Navigation */
 
 .site-menu,
-.site-menu-inner {
+.submenu{
   list-style: none;
 }
 
-.site-menu-item {
+.site-menu__button {
+  background-color: inherit;
+  border: none;
+  opacity: 0.3;
+}
+
+.site-menu__item {
   font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 18px;
   line-height: 22px;
@@ -140,7 +142,7 @@ img {
   letter-spacing: 3px;
 }
 
-.site-menu-inner-item {
+.submenu__item {
   font-family: var(--opensans-light-and-alt);
   font-size: 15px;
   line-height: 20px;
@@ -148,23 +150,25 @@ img {
   text-transform: capitalize;
 }
 
-.main-header-logo:hover,
-.site-menu a:hover,
-.header-product-actions a:hover,
-.header-user-menu a:hover {
+.logo_interactive:hover,
+.site-menu__link:hover,
+.submenu__link:hover,
+.user-menu__link_interactive_v1:hover,
+.product-actions__link:hover{
   opacity: 0.6;
 }
 
-.main-header-logo:active,
-.site-menu a:active,
-.header-product-actions a:active,
-.header-user-menu a:active {
+.logo_interactive:active,
+.site-menu__link:active,
+.submenu__link:active,
+.user-menu__link_interactive_v1:active,
+.product-actions__link:active{
   opacity: 0.3;
 }
 
 /* --- Main index--- */
 
-.info-wrapper h2 {
+.info-header {
   font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 47px;
   line-height: 58px;
@@ -175,7 +179,7 @@ img {
   list-style: none;
 }
 
-.advantages li {
+.advantages__item {
   font-size: inherit;
   line-height: 28px;
 }
@@ -203,21 +207,22 @@ img {
   list-style: none;
 }
 
-.breadcrumbs a {
+.breadcrumbs__link {
   font-size: 14px;
   line-height: 19px;
   opacity: 0.3;
 }
 
-.breadcrumbs a:hover {
+.breadcrumbs__link:hover {
   opacity: 0.6;
 }
 
-.breadcrumbs a:active {
+.breadcrumbs__link:active {
   opacity: 0.1;
 }
 
 /*Filter*/
+
 .filters {
   background-color: var(--basic-grey-light);
 }
@@ -228,63 +233,57 @@ img {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.filter legend {
+.filter__legend {
   font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 2px;
 }
 
-.filter ul {
+.filter-options {
   list-style: none;
+}
+
+.filter-options__label {
+  font-size: 14px;
   line-height: 19px;
 }
-.color-item,
-.choice-item {
-  font-size: 14px;
-}
 
-.filter-input-checkbox:disabled + label,
-.filter-input-radio:disabled + label {
-  cursor: default;
-  color: var(--spacial-grey);
-}
 /*Catalog*/
 
-.catalog-list {
+.product-list {
   list-style: none;
 }
 
-.catalog-item h3 {
+.product__header {
   font-family: var(--gilroy-extra-bold-and-alt);
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 1px;
 }
 
-.catalog-item-price {
+.product__price {
   font-family: var(--gilroy-light-and-alt);
   font-size: 16px;
   line-height: 18px;
   letter-spacing: 1px;
 }
 
-.button-compare {
+.product__button_compare {
   font-family: var(--opensans-light-and-alt);
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 1px;
-  border: none;
   background-color: var(--basic-white);
   opacity: 0.5;
   border: none;
 }
 
-.button-compare:hover {
+.product__button_compare:hover {
   opacity: 1;
 }
 
-.button-compare:active {
+.product__button_compare:active {
   opacity: 0.2;
 }
 
@@ -296,69 +295,36 @@ img {
   color: var(--basic-white)
 }
 
-.main-footer a {
-  color: inherit;
+
+.social__item_interactive,
+.html-academy_interactive:active,
+.product-actions__link_interactive,
+.user-menu__link_interactive_v2:active {
+  opacity: 0.3;
 }
 
-.main-footer-logo:hover,
-.html-academy-link:hover {
+.social__item_interactive:hover,
+.html-academy_interactive:hover {
   opacity: 0.6;
 }
 
-.main-footer-logo:active,
-.html-academy-link:active {
-  opacity: 0.3;
-}
-
-.stub-link,
-.stub-link:hover,
-.stub-link:active {
-  opacity: 1;
-}
-
-.footer-user-menu a {
-  opacity: 0.7;
-}
-
-.footer-user-menu a:hover {
-  opacity: 1;
-}
-
-.footer-user-menu a:active {
-  opacity: 0.3;
-}
-
-.footer-product-actions a {
-  opacity: 0.7;
-}
-
-.footer-product-actions a:hover {
-  opacity: 1;
-}
-
-.footer-product-actions a:active {
-  opacity: 0.3;
-}
-
-.footer-social ul {
-  list-style: none;
-}
-
-.social-item a {
-  opacity: 0.3;
-}
-
-.social-item a:hover {
-  opacity: 0.6;
-}
-
-.social-item a:active {
+.social__item_interactive:active {
   opacity: 0.1;
 }
 
+.product-actions__link_interactive,
+.user-menu__link_interactive_v2 {
+  opacity: 0.7;
+}
 
+.product-actions__link_interactive,
+.user-menu__link_interactive_v2:hover {
+  opacity: 1;
+}
 
-
+.social-list {
+  list-style: none;
+}
 
 .modal {
   display: none;
