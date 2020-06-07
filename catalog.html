@@ -24,14 +24,13 @@
           </button>
         </form>
         <div class="user-menu header__user-menu">
-          <a class="user-menu__link header__user-link user-menu__link_interactive_v2"
+          <a class="user-menu__link user-menu__link_header user-menu__link_interactive_v2"
              href="blank.html">Валентин Петухов</a>
-          <a class="user-menu__link header__logout-link user-menu__link_interactive_v2"
-             href="blank.html">Выйти</a>
+          <a class="user-menu__link user-menu__link_header user-menu__link_interactive_v1" href="blank.html">Войти</a>
         </div>
         <div class="product-actions header__product-actions">
-          <a class="product-actions__link header__compare-link" href="blank.html">Cравнить</a>
-          <a class="product-actions__link header__cart-link" href="blank.html">Корзина</a>
+          <a class="product-actions__link  " href="blank.html">Cравнить</a>
+          <a class="product-actions__link " href="blank.html">Корзина</a>
         </div>
       </div>
       <nav class="navigation">
@@ -94,7 +93,9 @@
       </section>
         <div class="container catalog-wrapper">
           <aside class="filters">
-            <h2 class="filter-header filter-header_grey-middle">Фильтр:</h2>
+            <div class="filters__wrapper">
+              <h2 class="filter-title">Фильтр:</h2>
+            </div>
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
               <fieldset>
                 <legend class="filter__legend">Стоимость</legend>
@@ -152,7 +153,7 @@
           </aside>
           <section class="catalog">
             <section class="sort flexbox">
-              <h2 class="filter-header">Сортировка:</h2>
+              <h2 class="filter-title filter-title_sort">Сортировка:</h2>
               <ul class="sort-options flexbox">
                 <li><button type="button">По цене</button></li>
                 <li><button type="button">По типу</button></li>
@@ -240,15 +241,15 @@
           </a>
           <div class="footer-links-wrapper flexbox">
             <div class="user-menu">
-              <a class="user-menu__link footer__user-link user-menu__link_interactive_v2"
+              <a class="user-menu__link user-menu__link_footer user-menu__link_interactive_v2"
                  href="blank.html">Валентин Петухов</a>
-              <a class="user-menu__link footer__logout-link user-menu__link_interactive_v2"
+              <a class="user-menu__link user-menu__link_footer user-menu__link_interactive_v2"
                  href="blank.html">Выйти</a>
             </div>
             <div class="product-actions">
-              <a class="product-actions__link footer__compare-link product-actions__link_interactive"
+              <a class="product-actions__link product-actions__link_footer product-actions__link_interactive"
                  href="blank.html">Cравнить</a>
-              <a class="product-actions__link footer__cart-link product-actions__link_interactive"
+              <a class="product-actions__link product-actions__link_footer product-actions__link_interactive"
                  href="blank.html">Корзина</a>
             </div>
           </div>
@@ -258,14 +259,14 @@
             г. Москва, ул. Строителей, 15
           </address>
           <nav class="navigation">
-            <ul class="site-menu footer__site-menu flexbox">
-              <li class="site-menu__item">
-                <a class="site-menu__link" href="blank.html">Доставка</a>
+            <ul class="site-menu footer__site-menu">
+              <li class="site-menu__item site-menu__item_footer">
+                <a class="site-menu__link " href="blank.html">Доставка</a>
               </li>
-              <li class="site-menu__item">
+              <li class="site-menu__item site-menu__item_footer">
                 <a class="site-menu__link" href="blank.html">Гарантия</a>
               </li>
-              <li class="site-menu__item">
+              <li class="site-menu__item site-menu__item_footer">
                 <a class="site-menu__link" href="blank.html">Контакты</a>
               </li>
             </ul>
