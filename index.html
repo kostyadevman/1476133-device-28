@@ -8,49 +8,39 @@
   </head>
   <body class="page-body">
     <header class="main-header container">
-      <a class="logo">
+      <a class="logo header__logo">
         <img class="logo__img" src="img/logo-device.svg"
              width="163"
              height="35"
              alt="Логотип Девайс">
       </a>
       <div class="header-links-wrapper">
-        <form class="search-form header__search-form" action="https://echo.htmlacademy.ru"
+        <form class="search-form" action="https://echo.htmlacademy.ru"
               method="post" aria-label="Поиск по сайту" autocomplete="off">
           <input class="input-search" type="search" name="query"
                  id="search" placeholder="Поиск по сайту">
-          <button class="button-search" type="submit">
-            <span class="button-search__text">Найти</span>
-          </button>
+          <button class="button-search" type="submit"> Найти </button>
         </form>
         <div class="user-menu header__user-menu">
-          <a class="user-menu__link user-menu__link_header user-menu__link_interactive_v1" href="blank.html">Войти</a>
+          <a class="user-menu__link user-menu__link_login login_header user-menu__link_header" href="blank.html">Войти</a>
         </div>
         <div class="product-actions header__product-actions">
-          <a class="product-actions__link  " href="blank.html">Cравнить</a>
-          <a class="product-actions__link " href="blank.html">Корзина</a>
+          <a class="product-actions__link product-actions__link_compare compare_header " href="blank.html">Cравнить</a>
+          <a class="product-actions__link product-actions__link_cart cart_header" href="blank.html">Корзина</a>
         </div>
       </div>
       <nav class="navigation">
         <ul class="site-menu header__site-menu">
           <li class="site-menu__item header__catalog-item">
             <a class="site-menu__link site-menu__item_submenu" href="catalog.html">Каталог товаров</a>
-            <button  class="site-menu__button" type="button"
-                     aria-label="Показать разделы">+</button>
             <ul class="submenu">
               <li class="submenu__item">
                 <a class="submenu__link" href="catalog.html">Виртуальная реальность</a>
-              </li>
-              <li class="submenu__item">
                 <a class="submenu__link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li class="submenu__item">
                 <a class="submenu__link" href="catalog.html">Экшн-камеры</a>
               </li>
               <li class="submenu__item">
                 <a class="submenu__link" href="catalog.html">Фитнес-браслеты</a>
-              </li>
-              <li class="submenu__item">
                 <a class="submenu__link" href="catalog.html">Умные часы</a>
               </li>
               <li class="submenu__item">
@@ -273,18 +263,18 @@
               Мы можем доставить ваш товар в самые отдаленные точки<br>
               России! DEVICE работает со многими транспортными компаниями:
             </p>
-            <ul class="company-list">
-              <li><b>Деловые линии</b></li>
-              <li><b>Авторейдинг</b></li>
-              <li><b>ЖелДорЭкспедиция</b></li>
-            </ul>
           </li>
         </ul>
-        <button class="button-common" type="button"><span>подробнее о нас</span></button>
+        <ul class="company-list">
+          <li class="company-list__item"><b>Деловые линии</b></li>
+          <li class="company-list__item"><b>Авторейдинг</b></li>
+          <li class="company-list__item"><b>ЖелДорЭкспедиция</b></li>
+        </ul>
+        <button class="button-common about-us__button" type="button"><span>подробнее о нас</span></button>
       </section>
         <section class="contacts">
         <h2 class="info-header">Контакты</h2>
-        <p>
+        <p class="advantages__item">
           Вы можете забрать товар сами, заехав в наш офис.
           Заодно, вы сможете<br>
           проверить работоспособность покупки. Всякое бывает.
@@ -295,7 +285,7 @@
                height="222"
                alt="Карта с маркером Москва улица Строителй 15">
         </a>
-        <button class="button-common" type="button"><span>напишите нам</span></button>
+        <button class="button-common about-us__button" type="button"><span>напишите нам</span></button>
       </section>
       </div>
     </main>
@@ -310,13 +300,13 @@
           </a>
           <div class="footer-links-wrapper flexbox">
             <div class="user-menu">
-              <a class="user-menu__link user-menu__link_footer user-menu__link_interactive_v2"
+              <a class="user-menu__link user-menu__link_login login_footer user-menu__link_footer"
                  href="blank.html">Войти</a>
             </div>
             <div class="product-actions">
-              <a class="product-actions__link product-actions__link_footer product-actions__link_interactive"
+              <a class="product-actions__link product-actions__link_compare compare_footer product-actions__link_footer"
                  href="blank.html">Cравнить</a>
-              <a class="product-actions__link product-actions__link_footer product-actions__link_interactive"
+              <a class="product-actions__link product-actions__link_cart compare_footer product-actions__link_footer"
                  href="blank.html">Корзина</a>
             </div>
           </div>
@@ -373,7 +363,7 @@
               </li>
           </ul>
           </section>
-          <a class="html-academy html-academy_interactive" href="https://htmlacademy.ru/intensive/htmlcss">
+          <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/logo-html.svg"
                width="24"
                height="34"
