@@ -306,13 +306,13 @@
             <div class="product-actions">
               <a class="product-actions__link product-actions__link_compare compare_footer product-actions__link_footer"
                  href="blank.html">Cравнить</a>
-              <a class="product-actions__link product-actions__link_cart compare_footer product-actions__link_footer"
+              <a class="product-actions__link product-actions__link_cart cart_footer product-actions__link_footer"
                  href="blank.html">Корзина</a>
             </div>
           </div>
         </div>
         <div class="footer-wrapper-middle flexbox">
-          <address>
+          <address class="address">
             г. Москва, ул. Строителей, 15
           </address>
           <nav class="navigation">
@@ -328,9 +328,9 @@
               </li>
             </ul>
           </nav>
-          <p>
+          <a href="tel:+74954959595">
             Тел.: +7 (495) 495-95-95
-          </p>
+          </a>
         </div>
         <div class="footer-wrapper-bottom flexbox">
           <div></div> <!--decoration here-->
@@ -372,39 +372,46 @@
         </div>
       </div>
     </footer>
-    <section class="modal">
+    <section class="modal-contact">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="contact-name">Ваше имя:</label>
-          <input type="text" name="name"
+      <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="contact-form__name">
+          <label class="modal-contact__label" for="contact-name">Ваше имя:</label>
+          <input class="name"type="text" name="name"
                  id="contact-name" placeholder="Имя Фамилия">
         </p>
-        <p>
-          <label for="contact-email">Ваш e-mail:</label>
-          <input type="email" name="email"
+        <p class="contact-form__email">
+          <label class="modal-contact__label" for="contact-email">Ваш e-mail:</label>
+          <input class="email" type="email" name="email"
                  id="contact-email"
                  placeholder="email@example.com">
         </p>
-        <p>
-          <label for="contact-message">Текст письма:</label>
-          <textarea name="message"
-                    id="contact-message" placeholder="В свободной форме">
-          </textarea>
+        <p class="contact-form__message">
+          <label  class="modal-contact__label" for="contact-message">Текст письма:</label>
+          <textarea class="message" name="message" rows="9"
+                    id="contact-message" placeholder="В свободной форме"></textarea>
         </p>
-        <button type="submit">Отправить</button>
+        <button class="button-common modal-contact__submit" type="submit">Отправить</button>
       </form>
-      <button type="button">Закрыть</button>
+      <button aria-label="Закрыть форму обратной связи"
+              class="modal-contact__close" type="button">
+        <img src="img/modal-close.svg" width="55" height="55"
+             alt="">
+      </button>
     </section>
-    <section class="modal">
+    <section class="modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <figure>
+      <figure class="map">
         <img src="img/map-big.png"
-         width="994"
-         height="593"
+         width="960"
+         height="560"
          alt="Карта с маркером Москва улица Строителй 15">
       </figure>
-      <button type="button">Закрыть</button>
+      <button aria-label="Закрыть форму обратной связи"
+              class="modal-contact__close" type="button">
+        <img src="img/modal-close.svg" width="55" height="55"
+             alt="">
+      </button>
     </section>
   </body>
 </html>
