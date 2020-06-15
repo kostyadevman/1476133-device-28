@@ -922,6 +922,7 @@ img {
 }
 
 .address {
+  width: 300px;
   font-style: inherit;
 }
 
@@ -929,17 +930,15 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  /*Exactly center*/
-  /*или же сделать элементы по краям одного размера и отцентровать*/
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  top: 0;
 }
 
 .site-menu__item_footer {
   margin: 0 18px;
+}
+
+.phone {
+  width: 300px;
+  text-align: right;
 }
 
 .footer-wrapper-bottom {
@@ -955,8 +954,13 @@ img {
   width: 80px;
   height: 7px;
   vertical-align: middle;
+  margin-right: 220px;
 }
 
+.html-academy {
+  width: 300px;
+  text-align: right;
+}
 .main-footer {
   background-color: var(--basic-dark);
   color: var(--basic-white);
@@ -993,12 +997,6 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-
-  /*Exactly center*/
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  top: 0;
 }
 
 .social__item {
