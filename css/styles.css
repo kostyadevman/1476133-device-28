@@ -1008,7 +1008,6 @@ img {
 .modal-contact,
 .modal-map {
   width: 960px;
-  height: 550px;
 
   position: fixed;
   left: 50%;
@@ -1022,7 +1021,7 @@ img {
 }
 
 .modal-contact {
-  display: none;
+  /*display: none;*/
 }
 
 
@@ -1128,7 +1127,7 @@ img {
 
 .modal-contact__submit {
   width: 200px;
-  margin-top: 24px;
+  margin-top: 22px;
 }
 
  /*Modal map*/
