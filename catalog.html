@@ -86,10 +86,24 @@
           </div>
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="filter__fieldset">
-              <legend class="filter__legend">Стоимость</legend>
-              <label for="filter-price"></label>
-              <input type="range" id="filter-price" name="price"
-                     min="0" max="10000" step="100" value="50">
+              <legend class="filter__legend">Стоимость:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="max-price" value="5000">
+                  </label>
+                </div>
+              </div>
             </fieldset>
             <fieldset class="filter__fieldset">
               <legend class="filter__legend">Цвет</legend>
@@ -140,16 +154,27 @@
           </form>
         </aside>
         <section class="catalog">
-          <section class="sort flexbox">
+          <section class="sort">
             <h2 class="filter-title filter-title_sort">Сортировка:</h2>
             <ul class="sort-options flexbox">
-              <li><button type="button">По цене</button></li>
-              <li><button type="button">По типу</button></li>
-              <li><button type="button">По популярности</button></li>
+              <li class="sort-options__item">
+                <button class="sort-options__button sort-options__button_active" type="button">По цене</button>
+              </li>
+              <li class="sort-options__item">
+                <button class="sort-options__button" type="button">По типу</button>
+              </li>
+              <li class="sort-options__item">
+                <button class="sort-options__button" type="button">По популярности</button>
+              </li>
+
             </ul>
             <ul class="sort-direction flexbox">
-              <li><button type="button" aria-label="По убыванию">&#8595;</button></li>
-              <li><button type="button" aria-label="По возрастанию">&#8593;</button></li>
+              <li>
+                <button class="sort-direction__button sort-direction__up" type="button" aria-label="По возрастанию"></button>
+              </li>
+              <li>
+                <button class="sort-direction__button sort-direction__down sort-direction__button_active" type="button" aria-label="По убыванию"></button>
+              </li>
             </ul>
           </section>
           <h2 class="visually-hidden">Список товаров</h2>
@@ -224,11 +249,23 @@
         <section>
           <h3 class="visually-hidden">Постраничный вывод</h3>
           <ul class="pagination-list">
-            <li class="pagination__item"><a>Назад</a></li>
-            <li class="pagination__item pagination-item-current"><a>1</a></li>
-            <li class="pagination__item"><a href="blank.html">2</a></li>
-            <li class="pagination__item"><a href="blank.html">3</a></li>
-            <li class="pagination__item"><a href="blank.html">Вперед</a></li>
+            <li class="pagination__item">
+              <button class="pagination-button">Назад</button>
+            </li>
+            <div class="pagination-wrapper">
+              <li class="pagination__item pagination-item-current">
+                <button class="pagination-button">1</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination-button">2</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination-button">3</button>
+              </li>
+            </div>
+            <li class="pagination__item">
+              <button class="pagination-button">Вперед</button>
+            </li>
           </ul>
         </section>
       </section>
