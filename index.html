@@ -208,7 +208,7 @@
           </li>
           <li class="popular__item">
             <a class="popular__link" href="catalog.html">
-              <h3 class="popular__header">Квадрокоптеры</h3>
+              <h3 class="popular__header">Квадрокоптер</h3>
             </a>
           </li>
         </ul>
@@ -218,17 +218,17 @@
           <h2 class="visually-hidden">Сервисы</h2>
           <ul class="service_triggers">
             <li class="services__item">
-              <button class="services__link button-common services__link_active">Доставка</button>
+              <button class="services__button button-common services__button_active">Доставка</button>
             </li>
             <li class="services__item">
-              <button class="services__link button-common">Гарантия</button>
+              <button class="services__button button-common">Гарантия</button>
             </li>
             <li class="services__item">
-              <button class="services__link button-common">Кредит</button>
+              <button class="services__button button-common">Кредит</button>
             </li>
           </ul>
           <ul class="services__tabs">
-            <li id="delivery" class="tab__item tab__item_delivery">
+            <li id="delivery" class="tab__item tab_current">
               <h3 class="tab__header">Доставка</h3>
               <p class="tab__text">
                 Мы с удовольствием доставим ваш товар прямо к вашему<br>
@@ -236,7 +236,7 @@
                 заработаем, поднимая его на ваш этаж.
               </p>
             </li>
-            <li id="warranty" class="tab__item tab__item_warranty">
+            <li id="warranty" class="tab__item">
               <h3 class="tab__header">Гарантия</h3>
               <p class="tab__text">
                 Если из-за возгорания купленного у нас товара у вас сгорит дом —<br>
@@ -244,7 +244,7 @@
                 Товар, не дом, конечно же.
               </p>
             </li>
-            <li id="credit" class="tab__item tab__item_credit">
+            <li id="credit" class="tab__item">
             <h3 class="tab__header">Кредит</h3>
             <p class="tab__text">
               Залезть в долговую яму стало проще! Кредитные консультанты<br>
@@ -325,13 +325,13 @@
           Заодно, вы сможете<br>
           проверить работоспособность покупки. Всякое бывает.
         </p>
-        <a href="#" aria-label="Перейти на yandex карты">
+        <a class="map__show" href="#" aria-label="Перейти на yandex карты">
           <img src="img/map.png"
                width="560"
                height="222"
                alt="Карта с маркером Москва улица Строителй 15">
         </a>
-        <button class="button-common about-us__button" type="button"><span>напишите нам</span></button>
+        <button class="button-common contact__button contact__show" type="button"><span>напишите нам</span></button>
       </section>
       </div>
     </main>
@@ -451,17 +451,19 @@
     </section>
     <section class="modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <figure class="map">
-        <img src="img/map-big.png"
-         width="960"
-         height="560"
-         alt="Карта с маркером Москва улица Строителй 15">
-      </figure>
-      <button aria-label="Закрыть форму обратной связи"
-              class="modal-contact__close" type="button">
+      <iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.5350115390638!2d37.53049239862306!3d55.68777033966506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2sUlitsa%20Stroiteley%2C%2015%2C%20Moskva%2C%20119311!5e0!3m2!1sen!2sru!4v1593605683647!5m2!1sen!2sru" width="960" height="560" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <img class="modal-map__img" src="img/map-big.png"
+       width="960"
+       height="560"
+       alt="Карта с маркером Москва улица Строителй 15">
+      <button aria-label="Закрыть карту"
+              class="modal-map__close" type="button">
         <img src="img/modal-close.svg" width="55" height="55"
              alt="">
       </button>
     </section>
+
+  <script src="js/modal.js"></script>
+  <script src="js/slider.js"></script>
   </body>
 </html>
