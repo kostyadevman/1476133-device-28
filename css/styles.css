@@ -1272,7 +1272,6 @@ img {
 .sort {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
   position: relative;
   background-color: var(--basic-grey-light);
 }
