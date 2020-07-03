@@ -10,7 +10,7 @@
     <header class="main-header container">
       <a class="logo header__logo logo_interactive" href="index.html">
         <img class="logo__img" src="img/logo-device.svg"
-             width="163"
+             width="164"
              height="35"
              alt="Логотип Девайс">
       </a>
@@ -22,8 +22,7 @@
           <button class="button-search" type="submit"> Найти </button>
         </form>
         <div class="user-menu header__user-menu">
-          <a class="user-menu__link user-menu__link_login login_header user-menu__link_header"
-             href="blank.html">Валентин Петухов</a>
+          <a class="user-menu__link user-menu__link_login login_header user-menu__link_header" href="blank.html">Валентин Петухов</a>
           <a class="user-menu__link logout-header " href="#">Выйти</a>
         </div>
         <div class="product-actions header__product-actions">
@@ -63,16 +62,18 @@
       </nav>
     </header>
     <main>
-      <h1 class="visually-hidden">
+      <section class="container">
+        <h1 class="visually-hidden">
         Пустая страница
-      </h1>
-      <ul class="breadcrumbs container">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="index.html">Главная</a>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Пустая страница</a>
-        </li>
-      </ul>
+        </h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Пустая страница</a>
+          </li>
+        </ul>
+      </section>
     </main>
     <footer class="main-footer">
       <div class="container">
@@ -85,8 +86,9 @@
           </a>
           <div class="footer-links-wrapper flexbox">
             <div class="user-menu">
-              <a class="user-menu__link user-menu__link_footer user-menu__link_login login_footer"
-                 href="blank.html">Валентин Петухов</a>
+              <a class="user-menu__link user-menu__link_footer user-menu__link_login login_footer" href="blank.html">
+                <span class="text-overflow">Валентин Петухов</span>
+              </a>
               <a class="user-menu__link user-menu__link_footer user-menu__link_logout " href="#">Выйти</a>
             </div>
             <div class="product-actions">
@@ -126,37 +128,25 @@
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social-list flexbox">
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img src="img/fb.svg"
-                       width="32"
-                       height="32"
-                       alt="Фейсбук">
+                <a class="social__link" target="_blank" href="https://www.facebook.com/">
+                  <img src="img/fb.svg" width="32" height="32" alt="Фейсбук">
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img src="img/instagram.svg"
-                       width="32"
-                       height="32"
-                       alt="Инстаграм">
+                <a class="social__link" target="_blank" href="https://www.instagram.com/">
+                  <img src="img/instagram.svg" width="32" height="32" alt="Инстаграм">
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img src="img/twitter.svg"
-                       width="32"
-                       height="32"
-                       alt="Твиттер">
+                <a class="social__link" target="_blank" href="https://twitter.com/">
+                  <img src="img/twitter.svg" width="32" height="32" alt="Твиттер">
                 </a>
               </li>
           </ul>
           </section>
           <div class="html-academy-wrapper">
-            <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="img/logo-html.svg"
-                 width="24"
-                 height="34"
-                 alt="HTML Academy">
+            <a class="html-academy" target="_blank" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
             </a>
           </div>
         </div>

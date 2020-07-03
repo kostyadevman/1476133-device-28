@@ -9,21 +9,20 @@
   <body class="page-body">
     <header class="main-header container">
       <a class="logo header__logo logo_interactive" href="index.html">
-        <img class="logo__img" src="img/logo-device.svg"
-             width="163"
-             height="35"
-             alt="Логотип Девайс">
+        <img class="logo__img" src="img/logo-device.svg" width="164" height="35" alt="Логотип Девайс">
       </a>
       <div class="header-links-wrapper">
-        <form class="search-form" action="https://echo.htmlacademy.ru"
-              method="post" aria-label="Поиск по сайту" autocomplete="off">
-          <input class="input-search" type="search" name="query"
-                 id="search" placeholder="Поиск по сайту">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post" aria-label="Поиск по сайту" autocomplete="off">
+          <label for="search">
+            <img class="search__img" src="img/search.svg" width="16" height="16" alt="">
+          </label>
+          <input class="input-search" type="search" name="query" id="search" placeholder="Поиск по сайту">
           <button class="button-search" type="submit"> Найти </button>
         </form>
         <div class="user-menu header__user-menu">
-          <a class="user-menu__link user-menu__link_login login_header user-menu__link_header"
-             href="blank.html">Валентин Петухов</a>
+          <a class="user-menu__link user-menu__link_login login_header user-menu__link_header" href="blank.html">
+            <span class="text-overflow">Валентин Петухов</span>
+          </a>
           <a class="user-menu__link logout-header " href="#">Выйти</a>
         </div>
         <div class="product-actions header__product-actions">
@@ -110,28 +109,23 @@
                 <legend class="filter__legend">Цвет</legend>
                 <ul class="filter__option-list">
                   <li class="filter__item">
-                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color"
-                           id="color-black" value="black" checked>
+                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color" id="color-black" value="black" checked>
                     <label class="filter__label" for="color-black">Черный</label>
                   </li>
                   <li class="filter__item">
-                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color"
-                           id="color-white"  value="white">
+                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color" id="color-white"  value="white">
                     <label class="filter__label" for="color-white">Белый</label>
                   </li>
                   <li class="filter__item">
-                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color"
-                           id="color-navy" checked value="navy">
+                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color" id="color-navy" checked value="navy">
                     <label class="filter__label" for="color-navy">Синий</label>
                   </li>
                   <li class="filter__item">
-                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color"
-                           id="color-red" value="red" checked>
+                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color" id="color-red" value="red" checked>
                     <label class="filter__label" for="color-red">Красный</label>
                   </li>
                   <li class="filter__item">
-                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color"
-                         id="color-pink" value="pink">
+                    <input class="filter__checkbox visually-hidden" type="checkbox" name="color" id="color-pink" value="pink">
                     <label class="filter__label" for="color-pink">Розовый</label>
                   </li>
                 </ul>
@@ -140,13 +134,11 @@
                 <legend class="filter__legend">Bluetooth</legend>
                 <ul class="filter__option-list">
                   <li class="filter__item">
-                    <input class="filter__radio visually-hidden" type="radio" name="bluetooth"
-                         id="bluetooth-yes" checked value="1">
+                    <input class="filter__radio visually-hidden" type="radio" name="bluetooth" id="bluetooth-yes" checked value="1">
                     <label class="filter__label" for="bluetooth-yes">Есть</label>
                   </li>
                   <li class="filter__item">
-                    <input class="filter__radio visually-hidden" type="radio" name="bluetooth"
-                         id="bluetooth-no" value="0">
+                    <input class="filter__radio visually-hidden" type="radio" name="bluetooth" id="bluetooth-no" value="0">
                     <label class="filter__label" for="bluetooth-no">Нет</label>
                   </li>
                 </ul>
@@ -155,6 +147,7 @@
             </form>
           </aside>
           <section class="catalog">
+            <h2 class="visually-hidden">Каталог</h2>
             <section class="sort">
               <h2 class="filter-title filter-title_sort">Сортировка:</h2>
               <ul class="sort-options flexbox">
@@ -180,15 +173,12 @@
             </section>
             <h2 class="visually-hidden">Список товаров</h2>
             <ul class="product-list">
-              <li class="product__item">
+              <li class="product">
                 <div class="product__actions">
                   <button class="button-common product__button_cart" type="button"><span>В корзину</span></button>
                   <button class="product__button_compare" type="button">Добавить к сравнению</button>
                 </div>
-                <img class="product__img" src="img/item-1.jpg"
-                     width="360"
-                     height="380"
-                     alt="селфи&#8209;палка со смартфоном">
+                <img class="product__img" src="img/item-1.jpg" width="360" height="380" alt="селфи&#8209;палка со смартфоном">
                 <div class="product__description">
                   <h3 class="product__header">
                     <a href="blank.html">Любительская селфи&#8209;палка</a>
@@ -196,15 +186,12 @@
                   <span class="product__price">500 руб.</span>
                 </div>
               </li>
-              <li class="product__item">
+              <li class="product">
                 <div class="product__actions">
                   <button class="button-common product__button_cart" type="button"><span>В корзину</span></button>
                   <button class="product__button_compare" type="button">Добавить к сравнению</button>
                 </div>
-                <img class="product__img" src="img/item-2.jpg"
-                     width="360"
-                     height="380"
-                     alt="селфи&#8209;палка в сложенном виде">
+                <img class="product__img" src="img/item-2.jpg" width="360" height="380" alt="селфи&#8209;палка в сложенном виде">
                 <div class="product__description">
                   <h3 class="product__header">
                     <a href="blank.html">Профессиональная селфи&#8209;палка</a>
@@ -212,16 +199,12 @@
                   <span class="product__price">1 500 руб.</span>
                 </div>
               </li>
-              <li class="product__item">
+              <li class="product">
                 <div class="product__actions">
                   <button class="button-common product__button_cart" type="button"><span>В корзину</span></button>
                   <button class="product__button_compare" type="button">Добавить к сравнению</button>
                 </div>
-                <img class="product__img" src="img/item-3.jpg"
-                     width="360"
-                     height="380"
-                     alt="селфи&#8209;палка с прикрепленной экшн камерой
-                          и веревочкой для кисти">
+                <img class="product__img" src="img/item-3.jpg" width="360" height="380" alt="селфи&#8209;палка с прикрепленной экшн камерой и веревочкой для кисти">
                 <div class="product__description">
                   <h3 class="product__header">
                     <a href="blank.html">Непотопляемая селфи&#8209;палка</a>
@@ -229,16 +212,12 @@
                   <span class="product__price">2 500 руб.</span>
                 </div>
               </li>
-              <li class="product__item product__item_new">
+              <li class="product product_new">
                 <div class="product__actions">
                   <button class="button-common product__button_cart" type="button"><span>В корзину</span></button>
                   <button class="product__button_compare" type="button">Добавить к сравнению</button>
                 </div>
-                <img class="product__img" src="img/item-4.jpg"
-                     width="360"
-                     height="380"
-                     alt="селфи&#8209;палка со смартфоном и
-                          штативом в виде руки">
+                <img class="product__img" src="img/item-4.jpg" width="360" height="380" alt="селфи&#8209;палка со смартфоном и штативом в виде руки">
                 <div class="product__description">
                   <h3 class="product__header">
                     <a href="blank.html">селфи&#8209;палка «Следуй за мной»</a>
@@ -250,23 +229,19 @@
           <section>
             <h3 class="visually-hidden">Постраничный вывод</h3>
             <div class="pagination">
-              <div class="pagination__item">
-                <button class="pagination-button pagination__button_previous pagination-button-active">Назад</button>
-              </div>
+              <button class="pagination__button pagination__button_previous pagination__button-active">Назад</button>
               <div class="pagination-wrapper">
                 <div class="pagination__item">
-                  <button class="pagination-button pagination-button-active">1</button>
+                  <button class="pagination__button pagination__button-active">1</button>
                 </div>
                 <div class="pagination__item">
-                  <button class="pagination-button">2</button>
+                  <button class="pagination__button">2</button>
                 </div>
                 <div class="pagination__item">
-                  <button class="pagination-button">3</button>
+                  <button class="pagination__button">3</button>
                 </div>
               </div>
-              <div class="pagination__item">
-                <button class="pagination-button pagination__button_next pagination-button-active">Вперед</button>
-              </div>
+              <button class="pagination__button pagination__button_next pagination__button-active">Вперед</button>
             </div>
           </section>
         </section>
@@ -284,15 +259,14 @@
           </a>
           <div class="footer-links-wrapper flexbox">
             <div class="user-menu">
-              <a class="user-menu__link user-menu__link_footer user-menu__link_login login_footer"
-                 href="blank.html">Валентин Петухов</a>
+              <a class="user-menu__link user-menu__link_footer user-menu__link_login login_footer" href="blank.html">
+                <span class="text-overflow">Валентин Петухов</span>
+              </a>
               <a class="user-menu__link user-menu__link_footer user-menu__link_logout " href="#">Выйти</a>
             </div>
             <div class="product-actions">
-              <a class="product-actions__link product-actions__link_compare compare_footer product-actions__link_footer"
-                 href="blank.html">Cравнить</a>
-              <a class="product-actions__link product-actions__link_cart cart_footer product-actions__link_footer"
-                 href="blank.html">Корзина</a>
+              <a class="product-actions__link product-actions__link_compare compare_footer product-actions__link_footer" href="blank.html">Cравнить</a>
+              <a class="product-actions__link product-actions__link_cart cart_footer product-actions__link_footer" href="blank.html">Корзина</a>
             </div>
           </div>
         </div>
@@ -325,37 +299,25 @@
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social-list flexbox">
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img src="img/fb.svg"
-                       width="32"
-                       height="32"
-                       alt="Фейсбук">
+                <a class="social__link" target="_blank" href="https://www.facebook.com/">
+                  <img src="img/fb.svg" width="32" height="32" alt="Фейсбук">
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img src="img/instagram.svg"
-                       width="32"
-                       height="32"
-                       alt="Инстаграм">
+                <a class="social__link" target="_blank" href="https://www.instagram.com/">
+                  <img src="img/instagram.svg" width="32" height="32" alt="Инстаграм">
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#">
-                  <img src="img/twitter.svg"
-                       width="32"
-                       height="32"
-                       alt="Твиттер">
+                <a class="social__link" target="_blank" href="https://twitter.com/">
+                  <img src="img/twitter.svg" width="32" height="32" alt="Твиттер">
                 </a>
               </li>
           </ul>
           </section>
           <div class="html-academy-wrapper">
-            <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="img/logo-html.svg"
-                 width="24"
-                 height="34"
-                 alt="HTML Academy">
+            <a class="html-academy" target="_blank" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img src="img/logo-html.svg" width="27" height="34" alt="HTML Academy">
             </a>
           </div>
         </div>
