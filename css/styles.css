@@ -125,6 +125,7 @@ img {
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-align: center;
   background-color: transparent;
 }
 
@@ -234,6 +235,8 @@ img {
 }
 
 .button-search:hover {
+  top: 0;
+  right: 0;
   background-color: var(--basic-black);
   color: var(--basic-white);
   opacity: 1;
@@ -243,7 +246,6 @@ img {
   background-color: var(--basic-black);
   color: var(--basic-white);
   opacity: 1;
-
 }
 
 .button-search:active {
@@ -472,7 +474,7 @@ img {
 
 .promo {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .promo::before {
@@ -565,7 +567,7 @@ img {
 
 .promo-slider__text {
   margin: 0;
-  padding: 0;
+  padding: 0 25px 0 0;
   font-size: 15px;
   line-height: 20px;
 }
@@ -618,7 +620,7 @@ img {
   justify-content: flex-start;
   position: absolute;
   right: 80px;
-  top: 330px;
+  bottom: 140px;
   z-index: 20;
   margin: 0;
   padding: 0;
@@ -638,10 +640,6 @@ img {
 }
 
 .slider-controls__button.button_current::before {
-  display: block;
-  content: "";
-  width: 12px;
-  height: 12px;
   background: url("../img/slider-button.svg") no-repeat;
 }
 
@@ -667,87 +665,54 @@ img {
 .popular__item {
   width: 160px;
   position: relative;
+  margin-top: 20px;
   margin-right: 40px;
+}
+
+.popular__link {
+  display: block;
+}
+
+.popular__wrapper {
+  display: block;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 40px;
+  background-color: var(--special-yellow);
+}
+
+.popular__img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 160px;
+  max-height: 160px;
 }
 
 .popular__item:nth-child(6n) {
   margin-right: 0;
 }
 
-.popular__link::before {
-  display: inline-block;
-  vertical-align: baseline;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 160px;
-  height: 160px;
-  margin-bottom: 33px;
-}
-.popular__link::after {
-  display: block;
-  position: absolute;
-  content: "";
-  top: 0;
-  width: 160px;
-  height: 160px;
-}
-
-.popular__item:nth-child(1) .popular__link::after {
-  background-image: url("../img/popular-1.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.popular__item:nth-child(2) .popular__link::after {
-  background-image: url("../img/popular-2.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.popular__item:nth-child(3) .popular__link::after {
-  background-image: url("../img/popular-3.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.popular__item:nth-child(4) .popular__link::after {
-  background-image: url("../img/popular-4.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.popular__item:nth-child(5) .popular__link::after {
-  background-image: url("../img/popular-5.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.popular__item:nth-child(6) .popular__link::after {
-  background-image: url("../img/popular-6.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.popular__item .popular__link::before {
-  background-color: var(--special-yellow);
-}
-
-.popular__item .popular__link:hover::before,
-.popular__item .popular__link:focus::before {
+.popular__link:hover .popular__wrapper,
+.popular__link:focus .popular__wrapper,
+.popular__link:active .popular__wrapper {
    background-color: rgba(var(--special-yellow-dark-rgb), 1);
 }
 
-.popular__item .popular__link:active::before {
+.popular__link:active .popular__wrapper:active {
    background-color: rgba(var(--special-yellow-dark-rgb), 1);
 }
 
-.popular__link:active::after,
-.popular__link:active .popular__header {
+.popular__link:active .popular__header,
+.popular__link:active .popular__img {
   opacity: 0.3;
 }
 
 .popular__header {
+  max-width: 130px;
   margin: 0;
   padding: 0;
   font-family: var(--secondary-extra-bold-f);
@@ -759,7 +724,7 @@ img {
 /*Services*/
 
 .services {
-  background: linear-gradient(to bottom, white 25%, var(--basic-grey-light)20%);
+  background: linear-gradient(to bottom, white 100px, var(--basic-grey-light)5%);
 }
 
 .services-wraper {
@@ -809,16 +774,17 @@ img {
   height: 165px;
   position: absolute;
   right: 0;
-  background-image: url("../img/delivery.svg");
+  background: url("../img/delivery.svg") no-repeat;
 }
 
 .tab__item:nth-child(2)::before {
   display: block;
+  position: absolute;
+  top: 50px;
+  right: -10px;
   content: "";
   width: 165px;
   height: 190px;
-  position: absolute;
-  right: 0;
   background-image: url("../img/warranty.svg");
 }
 
@@ -850,6 +816,7 @@ img {
 }
 
 .tab__text {
+  max-width: 570px;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -902,7 +869,7 @@ img {
   margin-bottom: 86px;
 }
 .about-us {
-  width: 500px;
+  width: 475px;
   position: relative;
 }
 
@@ -966,6 +933,7 @@ img {
 
 .contact__button,
 .about-us__button {
+  display: block;
   width: 260px;
   margin-top: 79px;
 }
@@ -1630,12 +1598,15 @@ img {
   margin-bottom: 65px;
 }
 
-.footer-wrapper__decoration {
-  vertical-align: middle;
+.footer-wrapper-bottom::before {
+  content: "";
+  display: block;
+  left: 0;
   width: 80px;
   height: 7px;
   margin-right: 220px;
   background-color: var(--special-yellow-dark);
+
 }
 
 .main-footer {
@@ -1713,12 +1684,11 @@ img {
 .modal-map {
   position: fixed;
   z-index: 9999;
-  left: 50%;
-  top: 50%;
+  left: calc(50% - 480px);
+  top: calc(50% - 280px);
   width: 960px;
   height: 560px;
   box-shadow: var(--box-shadow-light);
-  transform: translate(-50%, -50%);
   background-color: var(--basic-white);
 }
 
@@ -1847,6 +1817,48 @@ img {
   display: none;
 }
 
+
+@keyframes modal-on {
+   0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 1;
+   }
+   100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-show {
   display: block;
+  animation:  modal-on 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
